@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function tieneArroba(direccion) {
+    return direccion.includes("@");
+}
+
+    let direccionEmail = prompt("Ingrese una dirección de correo electrónico:");
+    let resultado = tieneArroba(direccionEmail);
+
+    if (resultado) {
+    console.log("La dirección de correo electrónico contiene el carácter '@'.");
+    } else {
+    console.log("La dirección de correo electrónico no contiene el carácter '@'.");
+}
+
+    </script>
+</body>
+</html>

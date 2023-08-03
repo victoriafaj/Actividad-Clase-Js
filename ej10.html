@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+    function imprimirPrimeraMitad(cadena) {
+        let mitad = Math.ceil(cadena.length / 2);
+        let primeraMitad = cadena.substring(0, mitad);
+        console.log("Primera mitad:", primeraMitad);
+}
+
+    function imprimirUltimoCaracter(cadena) {
+        let ultimoCaracter = cadena.charAt(cadena.length - 1);
+        console.log("Último carácter:", ultimoCaracter);
+}
+
+    function imprimirInverso(cadena) {
+        let inverso = cadena.split("").reverse().join("");
+        console.log("Inverso:", inverso);
+}
+
+    function imprimirConGuiones(cadena) {
+        let conGuiones = cadena.split("").join("-");
+        console.log("Con guiones:", conGuiones);
+}
+
+    function contarVocales(cadena) {
+        let vocales = cadena.match(/[aeiouAEIOUáéíóúÁÉÍÓÚ]/g);
+        return vocales ? vocales.length : 0;
+}
+
+    let oracion = prompt("Ingrese una oración:");
+
+    imprimirPrimeraMitad(oracion);
+    imprimirUltimoCaracter(oracion);
+    imprimirInverso(oracion);
+    imprimirConGuiones(oracion);
+
+    let cantidadVocales = contarVocales(oracion);
+    console.log("Cantidad de vocales:", cantidadVocales);
+
+    let palabras = oracion.split(" ");
+    for (let palabra of palabras) {
+        console.log(palabra);
+}
+
+    </script>
+</body>
+</html>

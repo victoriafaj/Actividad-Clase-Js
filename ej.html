@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+         function mostrarFecha() {
+            let fecha
+            let diasSemana = ["Domingo", "Lunes", "Martes", "Miércoles", "Jueves", "Viernes", "Sábado"];
+            let mesesTexto = ["Enero", "Febrero", "Marzo", "Abril", "Mayo", "Junio", "Julio", "Agosto", "Septiembre", "Octubre", "Noviembre", "Diciembre"];
+
+            fecha = new Date();
+            document.write('Hoy es ');
+            document.write(diasSemana[fecha.getDay()]+ ' ');
+            document.write(fecha.getDate() +' de ');
+            document.write(mesesTexto[fecha.getMonth()]+ ' de ');
+            document.write(fecha.getFullYear());
+            document.write('<br>');
+        }
+        mostrarFecha();
+
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function sumarVectores(vector1, vector2) {
+    let resultado = [];
+    
+    for (let i = 0; i < vector1.length; i++) {
+        resultado.push(vector1[i] + vector2[i]);
+    }
+    
+    return resultado;
+}
+
+    let tamañoVector = parseInt(prompt("Ingrese el tamaño de los vectores:"));
+
+    let vector1 = [];
+    let vector2 = [];
+
+    for (let i = 0; i < tamañoVector; i++) {
+        let elemento1 = parseFloat(prompt(`Ingrese el elemento ${i + 1} del primer vector:`));
+        vector1.push(elemento1);
+
+        let elemento2 = parseFloat(prompt(`Ingrese el elemento ${i + 1} del segundo vector:`));
+        vector2.push(elemento2);
+}
+
+    let vectorResultado = sumarVectores(vector1, vector2);
+
+    console.log("Vector 1:", vector1);
+    console.log("Vector 2:", vector2);
+    console.log("Resultado de la suma de vectores:", vectorResultado);
+
+    </script>
+</body>
+</html>

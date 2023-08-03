@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+    function esPalindromo(palabra) {
+    palabra = palabra.toLowerCase().replace(/[^a-z]/g, "");  // Convertir a minúsculas y eliminar caracteres no alfabéticos
+    let reverso = palabra.split("").reverse().join("");
+    return palabra === reverso;
+}
+
+    let entrada = prompt("Ingrese una palabra o texto:");
+    let resultado = esPalindromo(entrada);
+
+    if (resultado) {
+    console.log("La palabra/texto es un palíndromo.");
+}   else {
+    console.log("La palabra/texto no es un palíndromo.");
+}
+
+    </script>
+</body>
+</html>
